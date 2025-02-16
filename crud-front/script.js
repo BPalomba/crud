@@ -1,4 +1,4 @@
-const backendUrl = 'http://backend:8080';
+const backendUrl = 'https://crud-fde6.onrender.com';
 const url = `${backendUrl}/products`;
 
 
