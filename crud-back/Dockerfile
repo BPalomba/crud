@@ -2,6 +2,10 @@ FROM openjdk:17-jdk-alpine
 
 WORKDIR /app
 
+COPY . .
+
+RUN ./gradlew build
+
 COPY build/libs/crud-back-0.0.1.jar app.jar
 
 EXPOSE 8080
