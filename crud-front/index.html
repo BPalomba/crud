@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Create Read Update Delete</h2>
+        <form id="crudForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="addName" required>
+
+                <label for="descripcion">Description:</label>
+                <input type="text" id="addDescription">
+            </div>
+            <button id="addButton">Add Element</button>
+        </form>
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Toast confirmation popup -->
+    <div id="toast" class="toast"> saved </div>
+
+    <!-- Modal -->
+    <div class="modal" id="editModal">
+        <h3>Edit Product</h3>
+
+        <label>ID:</label>
+        <input type="text" id="editId" readonly>
+
+        <label>Name:</label>
+        <input type="text" id="editName">
+
+        <label>Description:</label>
+        <textarea id="editDescription" rows="3"></textarea>
+
+        <br>
+        <button id="closeBtn">Cancel</button>
+        <button id="saveBtn">Save</button>
+
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay">
+        <div class="overlay-content"></div>
+    </div>
+
+
+</body>
+
+<script src="script.js"></script>
+
+</html>

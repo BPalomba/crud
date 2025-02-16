@@ -1,0 +1,278 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 20vh;
+    overflow-x: scroll;
+}
+
+h2 {
+    text-align: center;
+}
+
+#addButton {
+    width: 100%;
+
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    max-width: 580px;
+
+}
+
+th,
+td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+    white-space: normal;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+
+
+}
+
+td {
+    max-width: 300px;
+    /* 🔥 Define un ancho máximo para las celdas */
+    height: auto;
+    /* 🔥 Permite que la celda crezca en altura si el contenido es largo */
+}
+
+th {
+    background-color: #f8f8f8;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+
+
+label {
+    padding-top: 2vh;
+}
+
+input {
+    margin-right: 5px;
+}
+
+.update {
+    background-color: #ffc107;
+    width: 5%;
+}
+
+.delete {
+    background-color: #dc3545;
+    width: 5%;
+}
+
+td button {
+    margin: 0 5%;
+}
+
+td button:hover {
+    background-color: rgb(0, 0, 0);
+    transition: 0.2s;
+}
+
+
+/* Fondo oscuro al abrir el modal */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 25px;
+    width: 380px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    text-align: center;
+}
+
+.modal h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+input,
+textarea {
+    width: calc(100% - 16px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+input[readonly] {
+    background-color: #e9e9e9;
+    color: #555;
+    cursor: not-allowed;
+}
+
+textarea {
+    resize: none;
+    height: 70px;
+}
+
+/* buttons modal */
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vh;
+}
+
+.modal button {
+    width: 48%;
+    padding: 1vh;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#saveBtn {
+    background: #4CAF50;
+    color: white;
+    margin-top: 1vh;
+}
+
+#saveBtn:hover {
+    background: #45a049;
+}
+
+#closeBtn {
+    background: #d9534f;
+    color: white;
+    margin-top: 1vh;
+}
+
+
+#closeBtn:hover {
+    background: #c9302c;
+}
+
+/* show modal */
+.show {
+    display: block;
+}
+
+
+
+/* Toast */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.5s, top 0.5s;
+}
+
+
+/* go downs when spawns */
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    top: 40px;
+
+}
+
+/* go up when hides */
+.toast.hide {
+    opacity: 0;
+    top: 10px;
+
+    transition: opacity 0.5s, top 0.5s;
+}
