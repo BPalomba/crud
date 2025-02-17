@@ -16,13 +16,13 @@ This project implements a simple CRUD (Create, Read, Update, Delete) application
 
 ## 📡 API Endpoints  
 
-### 📦 **Product Service** (`/api/product`)  
+### 📦 **Product Service** (`/api/products`)  
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| **POST** | `/api/product/create` | Create a new product |
-| **GET** | `/api/product/all` | Retrieve all products |
-| **PUT** | `/api/product/{id}` | Update an existing product |
-| **DELETE** | `/api/product/{id}` | Delete a product by ID |
+| **POST** | `/api/products/create` | Create a new product |
+| **GET** | `/api/products/all` | Retrieve all products |
+| **PUT** | `/api/products/{id}` | Update an existing product |
+| **DELETE** | `/api/products/{id}` | Delete a product by ID |
 
 ## 🚀 Live Demo
 
