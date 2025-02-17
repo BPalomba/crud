@@ -10,4 +10,4 @@ RUN ./gradlew build -x test
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "build/libs/tu-app.jar"]
+CMD ["java", "-jar", "build/libs/crud-back-0.0.1.jar"]
