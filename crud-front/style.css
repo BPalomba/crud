@@ -7,7 +7,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+
 }
+
 
 .container {
     max-width: 800px;
@@ -19,6 +21,10 @@ body {
     overflow: hidden;
     margin-top: 20vh;
     overflow-x: scroll;
+
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 h2 {
