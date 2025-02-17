@@ -4,10 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN ./gradlew build
-
-COPY build/libs/crud-back-0.0.1.jar app.jar
+RUN ./gradlew build -x test
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "build/libs/tu-app.jar"]

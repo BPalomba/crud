@@ -1,19 +1,11 @@
-FROM gradle:7.4.2-jdk11 AS backend-build
-WORKDIR /app
-
-COPY backend /app
-
-RUN gradle build -x test
-
-FROM tomcat:9.0
+FROM openjdk:17-jdk-slim
 
 WORKDIR /app
 
+COPY . .
 
-COPY --from=backend-build /app/build/libs/crud-back-0.0.1.jar /app/crud-back-0.0.1.jar
-
-COPY frontend /usr/local/tomcat/webapps/ROOT
+RUN ./gradlew build -x test
 
 EXPOSE 8080
 
-CMD ["catalina.sh", "run"]
+CMD ["java", "-jar", "build/libs/tu-app.jar"]
