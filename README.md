@@ -30,4 +30,9 @@ Check out the live demo of the application here:
 
 👉 [Live Demo](https://crud-front-hw2a.onrender.com/)
 
+## 🖼️ Preview
+
+![image](https://github.com/user-attachments/assets/e5704900-2f24-41c6-bf96-d6ead027f098)
+
+
 ---
